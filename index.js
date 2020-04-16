@@ -35,15 +35,15 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return `Goodbye, ${name}. Have a great day.`;
 }
 
 /**
  * ### Challenge `temperatureCtoF`
  * 
  * @instructions
- * This function should take an a temperature in celsius as an argument,
+ * This function should take in a temperature in celsius as an argument,
  * and return the temperature in fahrenheit, rounded to the nearest whole number. 
  * 
  * For example, if we invoke `temperatureCtoF`
@@ -53,8 +53,10 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(celcius) {
+  const t = celcius;
+  var temperatureCtoF = Math.round((t*9/5)+32);
+  return temperatureCtoF;
 }
 
 /**
@@ -74,10 +76,18 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temp, unit) {
+  if (unit==='F'){
+    return `${temp}${unit}`;
+  }else{
+  // function temperatureCtoF(temp) {
+    // const temp = celcius;
+    var temperatureCtoF = Math.round((temp*9/5)+32);
+    return `${temperatureCtoF}F`;
+  }
 }
 
+// console.log(temperatureInF(40, 'C'))
 
 /**
  * ### Challenge `makePersonObject`
@@ -95,10 +105,10 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
+  return {id, name, email}
 }
-
 /**
  * ### Challenge `getName`
  * 
@@ -112,8 +122,9 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName({id, name, email}) {
   /* code here */
+return `Hello, my name is ${name}`
 }
 
 
