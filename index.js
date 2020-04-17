@@ -269,11 +269,11 @@ function getLastCarInfo(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  /* code here */
-  let years [];
+  let years = [];
   for(let i=0;i<inventory.length;i++){
-    inventory.push(inventory[i].car_year);
+    years.push(inventory[i].car_year);
   }
+  return years;
   }
 
 /**
@@ -290,9 +290,12 @@ function getModelYears(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById() {
+  
 }
+// function getCarInfoById(inventory, id) {
+//   return `This is a ${inventory[index].car_make}`
+// }
 
 /**
  * ### Challenge `getOlderCars`
